@@ -94,7 +94,6 @@ int CommPartyTCPSynced::join(int sleepBetweenAttempts, int timeout, bool first) 
 		}
 		if (!isAccepted) {
 			boost::system::error_code ec;
-			cout << "accepting..." << endl;
 			acceptor_.accept(serverSocket, ec);
 			isAccepted = true;
 		}

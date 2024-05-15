@@ -78,7 +78,6 @@ public:
 	*/
 	byte getValue() const { return value; };
 	
-private:
 	/**
 	* The value that this wire carries. It can be set to either 0 or 1
 	*/
@@ -141,7 +140,6 @@ public:
 	*/
 	vector<bool> getTruthTable() const { return truthTable; };
 
-private:
 	/**
 	* A BitSet representation of the final column of a truth table (i.e. the output of the function being computed).
 	*/
@@ -347,7 +345,6 @@ public:
 
 	void write(string outputFileName);
 
-private:
 	/**
 	* An array of boolean flags set to {@code true} if and only if the input has been set for the indexed party or the indexed party has no inputs.
 	*/
