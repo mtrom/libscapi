@@ -96,16 +96,12 @@ void TwoPartyPlayer::setup_sockets(const vector<string>& names,int portnum_base)
   sockaddr_in dest;
   int pn = portnum_base;
 
-  printf("pn base = %d, player_no = %d, other_player = %d\n", portnum_base, player_no, other_player);
-
   if (player_no < other_player)
   {
-    printf("Setting up server on %d\n", pn);
     set_up_server_socket(dest, sockets[0], msocket[0], pn);
   }
   else
   {
-    printf("Setting up client to %s %d\n", names[other_player].c_str(), pn);
     set_up_client_socket(sockets[0], names[other_player].c_str(), pn);
   }
 }

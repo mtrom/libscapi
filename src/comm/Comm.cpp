@@ -87,8 +87,6 @@ int CommPartyTCPSynced::join(int sleepBetweenAttempts, int timeout, bool first) 
 				cerr << "Failed to connect after timeout, aborting!";
 				throw ex;
 			}
-			cout << "Failed to connect. sleeping for " << sleepBetweenAttempts <<
-				" milliseconds, " << ex.what() << endl;
 			this_thread::sleep_for(chrono::milliseconds(sleepBetweenAttempts));
 			totalSleep += sleepBetweenAttempts;
 		}

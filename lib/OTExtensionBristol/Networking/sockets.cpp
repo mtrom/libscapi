@@ -60,7 +60,7 @@ void set_up_server_socket(sockaddr_in& dest,int& consocket,int& main_socket,int 
   while (fl!=0)
     { fl=bind(main_socket, (struct sockaddr *)&serv, sizeof(struct sockaddr));
       if (fl != 0)
-        { cout << "Binding to socket failed, trying again in a second ..." << endl;
+        { 
           sleep(1);
         }
       else
